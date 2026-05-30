@@ -20,7 +20,7 @@ export default function ForgotPasswordPage() {
       const { error } = await mockAuthService.resetPasswordForEmail(email);
 
       if (error) {
-        setError(error.message);
+       setError((error as any).message);
       } else {
         setSuccess('⚠️ Demo Mode: Kiểm tra console developer để xem hướng dẫn khôi phục (Ctrl+Shift+J)');
         setEmail('');
